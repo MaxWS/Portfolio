@@ -100,6 +100,7 @@ main {
   font-weight: lighter; 
   margin-bottom: 1em;
   font-size: 1.5rem;
+  text-transform: uppercase;
 }
 .introduction.third {
   font-size: 1rem;
@@ -158,6 +159,10 @@ aside {
 .portfolio-img-two, .portfolio-img-fourth {
   justify-self: end;
 }
+.projects-sub {
+  font-variant: sub;
+  margin-top: 0.5em;
+}
 .expertise {
   grid-column: 2/12;
 }
@@ -185,7 +190,7 @@ ul {
 }
 
 .expertise-box-title {
-  background-color: cadetblue;
+  background-color: lightslategray;
   color: white;
   text-align: center;
   padding: 0.2em;
@@ -197,25 +202,43 @@ ul {
 .expertise-end {
     margin-top: 0.5em;
 }
-.farewell {
+/*.farewell {
   grid-column: 2/12;  
   background-color: red;
-}
+}*/
 
 
 /******************************************
 FOOTER
 /*******************************************/
 .footer {
-  background-color: #C8FF00;
-  padding: 5em;
+  background-color: cadetblue;
+  /*padding: 4em;*/
+}
+/*.year {
+  color: black;
+  grid-column: 2/3;
+  display: flex;
+  align-items: end;
+}*/
+.contact {
+  grid-column: 2/12;
+  padding: 2em;
+}
+.farewell {
+  text-align: center;
+}
+.social-media {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 0.5em;
 }
 
-
-/*Devices in between cell phone and tablet*/
+/* Medium devices (portrait tablets and large phones) */
 @media (min-width: 450px) {
   img {
-    max-width: 100%;
+    /*max-width: 100%;*/
   }
   .container.aside {
     margin-bottom: 4em;
@@ -242,11 +265,22 @@ FOOTER
   .expertise-box-div {
     margin-top: 0.5em;
   }
+  .container.footer {
+    margin-top: 2.5em;
+  }
+  .contact {
+    grid-column: 3/11;
+    padding: 3em;
+  }
+  .social-media {
+    margin-top: 1.5em;
+}
 
 
 }
 /* End Devices in between cell phone and tablet*/
 
+/* Large devices (landscape tablets/laptops/desktops) */
 @media (min-width: 1024px) {
   body {
     font-size: 1.2rem;
@@ -258,6 +292,9 @@ FOOTER
   }
   h2 {
     font-size: 1.5rem;
+  }
+  p {
+    font-size: 1.4rem;
   }
   img {
     max-width: 100%;
@@ -278,7 +315,7 @@ FOOTER
     font-size: 2.5rem;
   }
   .introduction.third {
-    font-size: 2rem; 
+    font-size: 1.8rem; 
     letter-spacing: 0.03em;
     word-spacing: 0.03em;
     margin-top: 2em;
@@ -333,21 +370,46 @@ FOOTER
   .expertise-end {
     margin-top: 1em;
   }
+  .container.footer {
+    padding-top: 3em;
+    padding-bottom: 1em;
+    margin-top: 0;
+  }
+  .contact {
+    grid-column: 3/12;
+    padding: 0;
+    /*padding-top: 3em;
+    padding-bottom: 3em;*/
+    /*padding-left: 0;
+    padding-right: 0;*/
+    margin-top: 2em;
+    margin-bottom: 1em;
+    display: inline-flex; 
+    justify-content: end;
+    align-items: center;
+  }
+  .farewell {
+  /*display: inline-flex;*/
+  }
+  .social-media {
+    padding-left: 0.5em;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+  .fa-3x {
+    font-size: 2.5em;
+    padding-left: 0.01em;
+    padding-right: 0.01em;
+  }
+  
   
 }
 
 @media (min-width: 1800px) {
   body {
     font-size: 1.5rem;
-  } 
-  .projects {
-    grid-column: 2/7;
-    margin-top: 0;
   }
-  .expertise {
-    grid-column: 8/12;
-  }
-
 }
 
 
