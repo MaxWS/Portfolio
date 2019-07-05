@@ -23,7 +23,7 @@ Author: Maximiliano Diaz Garcia
 
 body {
   color: mintcream;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
   line-height: 1.3;
   letter-spacing: 0.01em;
@@ -47,8 +47,10 @@ img {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-auto-rows: auto;
-  margin-top: 1.5em;
 }
+/*header {
+  font-size: 1.5rem;
+}*/
 .introduction {
   grid-column: 2/12;
 }
@@ -60,12 +62,12 @@ img {
   display: flex;
   flex-direction: column;
 }
-#typewriter {
+/*#typewriter {
   display: none;
   text-align: right;
   font-size: 4rem;
   color: #A6AEC1;
-}
+}*/
 main {
   position: relative;
   background-color: #2A364D;
@@ -100,10 +102,14 @@ main {
 .welcome {
   font-weight: lighter;
   margin-bottom: 1em;
-  font-size: 1.5rem;
+  font-size: 0.5rem;
   text-transform: uppercase;
 }
-.introduction.third {
+.introduction.column {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+.introduction.internship {
   font-size: 1rem;
   text-align: center;
   font-variant: all-petite-caps;
@@ -116,6 +122,11 @@ main {
 }
 .intro-p {
   display: inline;
+  font-size: 1.5rem;
+}
+.intern {
+  display: inline;
+  font-size: 1.2rem;
 }
 
 /******************************************
@@ -241,6 +252,9 @@ FOOTER
   img {
     /*max-width: 100%;*/
   }
+  .intro-p {
+    font-size: 2rem;
+  }
   .container.aside {
     margin-bottom: 4em;
   }
@@ -301,21 +315,38 @@ FOOTER
     max-width: 100%;
     height: auto;
   }
+  /*header {
+    font-size: 3rem;
+  }*/
   .container {
-    margin-top: 2em;
+    /*margin-top: 2em;*/
   }
-  #typewriter {
+  /*#typewriter {
     display: block;
-  }
+  }*/
   /*.section {
     padding: 1.5em;
   }*/
   .welcome {
     margin-top: 1em;
     margin-bottom: 0.5em;
-    font-size: 2.5rem;
+    font-size: 1rem;
   }
-  .introduction.third {
+  .intro-p {
+    font-size: 4rem;
+  }
+  .columns {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: auto;
+  }
+  .first-column {
+    grid-column: 1/4;
+  }
+  .intern {
+    font-size: 2rem;
+  }
+  .introduction.internship {
     font-size: 1.8rem;
     letter-spacing: 0.03em;
     word-spacing: 0.03em;
@@ -416,29 +447,3 @@ FOOTER
 
 
 
-/********************************************/
-#grid {
-  display: grid;
-  position: absolute;
-  top: 0;
-  left: 0;
-  grid-template-columns: repeat(12, 1fr);
-  grid-auto-rows: minmax(100%, auto);
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  padding: 0;
-  position: fixed;
-  grid-column-gap: 5px;
-
-}
-#grid p {
-  border: 1px solid black;
-  margin: 0;
-  opacity: 0.2;
-  background-color: grey;
-}
-#grid p:nth-child(even) {
-  background: #EDEDF2;
-}
-/*******************************************
