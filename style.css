@@ -312,7 +312,7 @@ FOOTER
 /* Medium devices (portrait tablets) */
 @media (min-width: 768px) {
   .landing {
-    min-height: 100vh;
+    min-height: 80vh;
   }
   .first-column {
     line-height: 2;
@@ -320,6 +320,9 @@ FOOTER
   }
   .introduction.column {
     margin: 1em 0 1em 0;
+  }
+  .intern {
+    font-size: 1.5rem;
   }
 }
 /* End */
