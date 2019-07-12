@@ -105,6 +105,9 @@ main {
 .landing {
   min-height: 90vh;
 }
+.header-icons {
+  text-align: right;
+}
 .welcome {
   font-weight: lighter;
   margin-bottom: 1em;
