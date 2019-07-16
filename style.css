@@ -24,6 +24,7 @@ Author: Maximiliano Diaz Garcia
   --blue: #193549;
   /*193549*/
   /*#2A364D(original)*/
+  --click: #B9E2A6;
 }
 body {
   color: mintcream;
@@ -46,9 +47,10 @@ h2 {
   display: inline-block;
 }*/
 img {
-  -webkit-clip-path: polygon(0 0, 75% 0, 100% 100%, 25% 100%);
-  clip-path: polygon(0 0, 75% 0, 100% 100%, 25% 100%);
+  -webkit-clip-path: polygon(0 0, 80% 0, 100% 100%, 15% 100%);
+  clip-path: polygon(0 0, 85% 0, 100% 100%, 20% 100%);
   max-width: 100%;
+  cursor: pointer;
 }
 .container {
   display: grid;
@@ -81,23 +83,20 @@ main {
   background-color: var(--blue);
   border-top: tomato solid 15px;
 }
-
 .main::after,
 .main::before {
   position: absolute;
   content: '';
   width: 100px;
   height: 100px;
-  background: #2A364D;
-  bottom: -1em;
+  background: var(--blue);
+  bottom: 0em;
   z-index: 99;
 }
-
 .main::before {
   right: 50%;
   transform: skew(0, 20deg)
 }
-
 .main::after {
   left: 50%;
   transform: skew(0, -20deg)
@@ -105,8 +104,24 @@ main {
 .landing {
   min-height: 90vh;
 }
+.fab, .far {
+  color: mintcream;
+  text-decoration: none;
+}
+.fab:hover {
+  color: var(--click);
+}
+.far:hover {
+  color: var(--click);
+}
 .header-icons {
   text-align: right;
+}
+.fab.fa-linkedin {
+  padding-right: 0.2em;
+}
+.far.fa-envelope {
+  padding-right: 0.2em;
 }
 .welcome {
   font-weight: lighter;
@@ -135,6 +150,7 @@ main {
   font-size: 1.8rem;
   font-weight: revert;
   letter-spacing: 0.02em;
+  font-weight: bold;
 }
 .intern {
   display: inline;
@@ -172,6 +188,10 @@ aside {
   grid-gap: 1em;
   justify-items: start;
 }*/
+img:hover {
+  opacity: 0.3;
+}
+
 .portfolio-img {
   display: grid;
   margin: 0.2em;
@@ -314,6 +334,10 @@ FOOTER
 
 /* Medium devices (portrait tablets) */
 @media (min-width: 768px) {
+  .main::after,
+  .main::before {
+    bottom: -1em;
+  }
   .landing {
     min-height: 80vh;
   }
@@ -366,6 +390,9 @@ FOOTER
   /*.section {
     padding: 1.5em;
   }*/
+  .header-icons {
+  font-size: 0.8rem;
+  }
   .welcome {
     margin-top: 1em;
     margin-bottom: 0.5em;
@@ -391,8 +418,8 @@ FOOTER
   }
   .introduction.internship {
     font-size: 1.8rem;
-    letter-spacing: 0.03em;
-    word-spacing: 0.03em;
+    letter-spacing: 0.2em;
+    word-spacing: 0.4em;
     margin-top: 3.5em;
   }
   .main::after,
@@ -492,4 +519,21 @@ FOOTER
 
 
 
+
+
+
+
+/*////////////////////sandbox////////////////////
+*/
+/*.intro-p {
+  position: relative;
+  display: block;
+  width: 0;
+  min-height: 1em;
+  transition: width 3s;
+  overflow: hidden;
+}
+.open {
+  width: 100%;
+}*/
 
