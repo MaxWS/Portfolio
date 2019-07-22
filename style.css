@@ -25,7 +25,12 @@ Author: Maximiliano Diaz Garcia
   /*193549*/
   /*#2A364D(original)*/
   --click: #B9E2A6;
+  --lightgrey: #6C788E;
 }
+
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+/*@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
+*/
 body {
   color: mintcream;
   font-size: 20px;
@@ -37,6 +42,18 @@ body {
   padding: 0;
   min-height: 100vh;
 }
+span {
+  font-family: 'Roboto Condensed', sans-serif;
+  /*text-shadow: 1px 1px 1px #aaa;*/
+  display: inline;
+  font-size: 1.9rem;
+  /*font-style: light;*/
+  letter-spacing: 0.02em;
+  font-weight: bold;
+}
+/*p { 
+  font-family: 'Ubuntu', sans-serif;
+}*/
 h1 {
   font-size: 1.3rem;
 }
@@ -51,6 +68,9 @@ img {
   clip-path: polygon(0 0, 85% 0, 100% 100%, 20% 100%);
   max-width: 100%;
   cursor: pointer;
+}
+li {
+  font-weight: lighter;
 }
 .container {
   display: grid;
@@ -145,14 +165,15 @@ main {
   margin-bottom: 1em;
   z-index: 100;
 }
-.intro-p {
+/*.intro-p {
   font-family: 'Roboto Condensed', sans-serif;
   display: inline;
   font-size: 1.8rem;
   font-weight: revert;
   letter-spacing: 0.02em;
   font-weight: bold;
-}
+}*/
+
 .intern {
   display: inline;
   font-size: 1.2rem;
@@ -167,23 +188,30 @@ aside {
   z-index: 10;
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
   margin-bottom: -10vw;
-  color: black;
+  color: var(--blue);
+}
+.container.aside {
+  margin-bottom: 3em;
+  /*font-family: 'Roboto Condensed', sans-serif;*/
+  font-weight: bold;
 }
 .projects {
   grid-column: 2/12;
   margin-top: 2em;
   margin-bottom: 1em;
+  font-family: 'Roboto', sans-serif;
 }
 .projects-title {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   
-  text-align: center;
-}
-.container.aside {
-  margin-bottom: 3em;
-  font-family: 'Roboto Condensed', sans-serif;
+  text-align: left;
+  font-weight: lighter;
   font-variant: all-petite-caps;
-  font-weight: bold;
+}
+.portfolio-name {
+  font-family: italic;
+  font-family: 'Ubuntu', sans-serif;
+  font-variant: sub;
 }
 /*.portfolio-img {
   display: grid;
@@ -217,9 +245,11 @@ img:hover {
   padding: 0.5em;
 }*/
 .expertise-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-align: center;
+  font-size: 2.5rem;
+  font-family: 'Roboto', sans-serif;
+  text-align: right;
+  font-weight: lighter;
+  font-variant: all-petite-caps;
 }
 .expertise-box {
   display: flex;
@@ -235,10 +265,11 @@ ul {
 }
 
 .expertise-box-title {
-  background-color: lightslategray;
-  color: white;
+  background-color: var(--lightgrey);
+  color: mintcream;
   text-align: center;
   padding: 0.2em;
+  font-family: 'Roboto', sans-serif;
 }
 .expertise-box-div {
   margin-top: 1em;
@@ -297,11 +328,17 @@ FOOTER
   img {
     /*max-width: 100%;*/
   }
-  .intro-p {
+  /*.intro-p {
     font-size: 2.5rem;
+  }*/
+  span {
+  font-size: 2.5rem;
   }
   .first-column {
     line-height: 1.5;
+  }
+  .intern {
+  font-size: 1.5rem;
   }
   .container.aside {
     margin-bottom: 4em;
@@ -319,9 +356,9 @@ FOOTER
     padding-right: 2.5em;
     padding-left: 2.5em;
   }
-  .expertise-title {
+  /*.expertise-title {
     text-align: center;
-  }
+  }*/
   .portfolio-img-two, .portfolio-img-fourth {
     justify-self: start;
   }
@@ -350,6 +387,9 @@ FOOTER
   }
   .landing {
     min-height: 80vh;
+  }
+  .intern {
+    font-size: 2rem;
   }
   .first-column {
     line-height: 2;
@@ -411,8 +451,11 @@ FOOTER
   .landing {
     min-height: 100vh;
   }
-  .intro-p {
+  /*.intro-p {
     font-size: 4rem;
+  }*/
+  span {
+  font-size: 4.5rem;
   }
   .columns {
     display: grid;
@@ -446,10 +489,10 @@ FOOTER
     margin-top: 0;
   }
   .projects-sub {
-  margin-top: 5.5em;
+  margin-top: 3.5em;
 }
   .projects-title {
-  font-size: 2rem;
+  font-size: 3.5rem;
   text-align: left;
   }
   .expertise {
@@ -460,7 +503,7 @@ FOOTER
   }
   .expertise-title {
     text-align: right;
-    font-size: 2rem;
+    font-size: 3.5rem;
   }
   .portfolio-img {
     display: grid;
@@ -538,15 +581,32 @@ FOOTER
 
 /*////////////////////sandbox////////////////////
 */
-/*.intro-p {
+
+
+
+/*/*//* span {
   position: relative;
   display: block;
   width: 0;
-  min-height: 1em;
-  transition: width 3s;
-  overflow: hidden;
-}
-.open {
-  width: 100%;
+  min-height: 0.5em;
+  -webkit-transition: width 5s; /* For Safari 3.1 to 6.0 */
+  /*transition: width 5s;*/
+  /*transition: width 0.3s;*/
+/*  overflow: hidden;
 }*/
+/*span.open {
+  -webkit-transform: rotate(deg);  Safari 
+  transform: rotate(deg);
+  width: 100%;
+  height: 10em;
+  animation-name: example;
+}*/
+  /*@keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}*/
+
 
