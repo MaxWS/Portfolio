@@ -162,7 +162,7 @@ main {
   letter-spacing: 0.02em;
   word-spacing: 0.02em;
   margin-top: 3em;
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
   z-index: 100;
 }
 /*.intro-p {
@@ -176,7 +176,9 @@ main {
 
 .intern {
   display: inline;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  margin-bottom: 0.5em;
+  font-weight: lighter;
 }
 
 /******************************************
@@ -197,7 +199,7 @@ aside {
 }
 .projects {
   grid-column: 2/12;
-  margin-top: 2em;
+  margin-top: 3em;
   margin-bottom: 1em;
   font-family: 'Roboto', sans-serif;
 }
@@ -235,15 +237,22 @@ img:hover {
   justify-self: end;
 }
 .projects-sub {
+  font-size: 1rem;
+  text-align: center;
   font-variant: sub;
   margin-top: 2.5em;
+  /*text-decoration: underline dotted var(--click);*/
 }
+/*.projects-sub:hover {
+  border-bottom: 1px dotted var(--click);
+  
+}*/
 .expertise {
   grid-column: 2/12;
 }
-/*.expertise-container {
-  padding: 0.5em;
-}*/
+.expertise-container {
+  margin-top: 2em;
+}
 .expertise-title {
   font-size: 2.5rem;
   font-family: 'Roboto', sans-serif;
@@ -277,7 +286,7 @@ ul {
 }
 .expertise-end {
   font-family: 'Ubuntu', sans-serif;
-  margin-top: 0.5em;
+  margin-top: 2.5em;
   font-size: 1.2rem;
   font-weight: 400;
   line-height: 1.3;
@@ -313,13 +322,14 @@ FOOTER
 .farewell {
   text-align: center;
   font-family: 'Fredoka One', cursive;
-  font-size: 2rem;
+  font-size: 1.3rem;
+  margin-top: 0.5em;
 }
 .social-media {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  margin-top: 0.5em;
+  margin-top: 1em;
 }
 
 /* Medium devices (small portrait tablets and large phones) */
@@ -391,8 +401,13 @@ FOOTER
   .main::before {
     bottom: -1em;
   }
-  .landing {
+  /*.landing {
     min-height: 80vh;
+  }*/
+  .welcome {
+    
+    margin-top: 5em;
+    
   }
   .intern {
     font-size: 2rem;
@@ -413,7 +428,7 @@ FOOTER
   }
   .social-media {
   
-    font-size: 2rem;
+    font-size: 1rem;
 }
   .projects-title {
     
@@ -431,7 +446,7 @@ FOOTER
     line-height: 1.5;
   }
   header {
-    margin-top: 2em;
+    margin-top: 1.5em;
   }
   h1 {
     font-size: 2rem;
@@ -508,10 +523,14 @@ FOOTER
   }
   .projects-sub {
   margin-top: 3.5em;
-}
+  text-align: left;
+  }
   .projects-title {
   font-size: 2.5rem;
   text-align: left;
+  }
+  .expertise-container {
+    margin-top: 0;
   }
   .expertise {
     grid-column: 8/12;
@@ -559,7 +578,7 @@ FOOTER
     margin-top: 0;
   }
   .contact {
-    grid-column: 3/12;
+    grid-column: 2/12;
     padding: 0;
     /*padding-top: 3em;
     padding-bottom: 3em;*/
@@ -568,17 +587,19 @@ FOOTER
     margin-top: 2em;
     margin-bottom: 1em;
     display: inline-flex;
-    justify-content: end;
-    align-items: center;
+    /*justify-content: end;*/
+    justify-content: space-between;
+    align-items: end;
   }
   .farewell {
   /*display: inline-flex;*/
+    margin-right: 2em;
   }
   .social-media {
     padding-left: 0.5em;
     flex-direction: column;
     /*text-align: center;*/
-    justify-content: center;
+    /*justify-content: center;*/
   }
   .fa-3x {
     font-size: 2.5em;
@@ -596,6 +617,9 @@ FOOTER
   .first-column {
     line-height: 3;
   }
+  .intern {
+    font-size: 2.5rem;
+  }
   .projects {
     grid-column: 2/6;
     margin-top: 0;
@@ -605,8 +629,8 @@ FOOTER
   }
   .expertise-title { 
   font-size: 3.5rem;
-}
-.projects-title {
+  }
+  .projects-title {
   font-size: 3.5rem;
   }
   .expertise-end {
