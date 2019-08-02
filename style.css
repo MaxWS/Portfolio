@@ -420,9 +420,9 @@ FOOTER
   }
   .introduction.internship {
     font-size: 1.8rem;
-    letter-spacing: 0.2em;
-    word-spacing: 0.4em;
-    margin-top: 3.5em;
+    letter-spacing: .2em;
+    word-spacing: .4em;
+    margin-top: 3em;
   }
   .main::after,
   .main::before {
@@ -527,6 +527,10 @@ FOOTER
   }
   .intern {
     font-size: 2.5rem;
+  }
+  .container.aside {
+    margin-top: 5em;
+    margin-bottom: 7em;
   }
   .projects {
     grid-column: 2/6;
