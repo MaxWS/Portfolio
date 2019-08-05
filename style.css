@@ -83,6 +83,10 @@ header {
   margin-top: 2em;
   margin-bottom: 1em;
 }
+a {
+  color: green;
+  text-decoration: none;
+}
 .container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -353,16 +357,13 @@ FOOTER
   .intern {
     font-size: 1.5rem;
   }
-  .expertise-title {
-    
+  .expertise-title { 
     font-size: 2rem;
   }
   .social-media {
-  
     font-size: 1rem;
   }
   .projects-title {
-    
     font-size: 2rem;
   }
 }
@@ -438,12 +439,13 @@ FOOTER
     margin-top: 0;
   }
   .projects-sub {
-  margin-top: 3.5em;
-  text-align: left;
+    font-size: 1.5rem;
+    margin-top: 3.5em;
+    text-align: left;
   }
   .projects-title {
-  font-size: 2.5rem;
-  text-align: left;
+    font-size: 2.5rem;
+    text-align: left;
   }
   .expertise-container {
     margin-top: 0;
