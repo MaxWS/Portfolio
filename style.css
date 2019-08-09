@@ -563,7 +563,12 @@ FOOTER
 
 /*////////////////////sandbox////////////////////
 */
-
+dialog {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  color: red;
+}
 
 
 /*/*//* span {
