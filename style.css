@@ -33,7 +33,7 @@ body {
   font-size: 20px;
   font-weight: 400;
   line-height: 1.3;
-  letter-spacing: 0.01em;
+  letter-spacing: .01em;
   font-family: 'Ubuntu', sans-serif;
   margin: 0;
   padding: 0;
@@ -56,7 +56,7 @@ span {
   font-family: 'Roboto Condensed', sans-serif;
   display: inline;
   font-size: 1.9rem;
-  letter-spacing: 0.02em;
+  letter-spacing: .02em;
   font-weight: bold;
 }
 h1 {
@@ -72,11 +72,11 @@ img {
   cursor: pointer;
 }
 ul {
-  padding: 0.3em;
+  padding: .3em;
 }
 li {
   font-weight: lighter;
-  border-bottom: 0.2px solid #ddd;
+  border-bottom: .2px solid #ddd;
   text-align: left;
 }
 header {
@@ -138,29 +138,36 @@ MAIN
   text-align: right;
 }
 .fab.fa-linkedin {
-  padding-right: 0.2em;
+  padding-right: .2em;
 }
 .far.fa-envelope {
-  padding-right: 0.2em;
+  padding-right: .2em;
 }
 .welcome {
   font-weight: lighter;
   margin-top: 2em;
   margin-bottom: 1em;
-  font-size: 0.7rem;
+  font-size: .7rem;
   text-transform: uppercase;
 }
+.general-assembly {
+  font-style: italic;
+  font-size: 1.5rem;
+}
 .introduction.column {
-  margin: 1em 0 2em 0;
+  margin: 1em 0 1em 0;
+}
+.first-column {
+  padding-top: .4em;  
 }
 .introduction.internship {
   font-size: 1rem;
   text-align: center;
   font-variant: all-petite-caps;
   font-weight: bold;
-  letter-spacing: 0.02em;
-  word-spacing: 0.02em;
-  margin-top: 3em;
+  letter-spacing: .02em;
+  word-spacing: .02em;
+  margin-top: 1.5em;
   margin-bottom: 1.5em;
   z-index: 100;
 }
@@ -186,7 +193,6 @@ ASIDE
 }
 .projects-title {
   font-size: 2.5rem;
-  
   text-align: left;
   font-weight: lighter;
   font-variant: all-petite-caps;
@@ -197,13 +203,13 @@ ASIDE
   font-variant: sub;
 }
 img:hover {
-  opacity: 0.3;
+  opacity: .3;
 }
 .portfolio-img {
   display: grid;
-  margin: 0.2em;
+  margin: .2em;
   margin-top: 1.5em;
-  grid-gap: 0.5em;
+  grid-gap: .5em;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(4, 1fr);
 }
@@ -243,7 +249,6 @@ img:hover {
 }
 .expertise-box-div {
   margin-top: 1em;
-
 }
 .expertise-end {
   font-family: 'Ubuntu', sans-serif;
@@ -251,7 +256,6 @@ img:hover {
   font-size: 1.2rem;
   font-weight: 400;
   line-height: 1.3;
-  letter-spacing: 0.01em;
 }
 .expertise-end-title {
   font-size: 1.5rem;
@@ -263,6 +267,7 @@ FOOTER
 /*******************************************/
 .footer {
   background-color: cadetblue;
+  border-bottom: tomato solid 5px;
 }
 .contact {
   grid-column: 2/12;
@@ -271,8 +276,10 @@ FOOTER
 .farewell {
   text-align: center;
   font-family: 'Fredoka One', cursive;
-  font-size: 1.3rem;
-  margin-top: 0.5em;
+  margin-top: .5em;
+}
+.farewell-quote {
+    font-size: 1.3rem;
 }
 .social-media {
   display: flex;
@@ -312,14 +319,13 @@ FOOTER
     padding-left: 2.5em;
   }
   .expertise-end {
-    
     margin-top: 2.5em;
   }  
   .portfolio-img-two, .portfolio-img-fourth {
     justify-self: start;
   }
   .expertise-box-div {
-    margin-top: 0.5em;
+    margin-top: .5em;
   }
   .container.footer {
     margin-top: 2.5em;
@@ -329,7 +335,7 @@ FOOTER
     padding: 3em;
   }
   .social-media {
-    margin-top: 1.5em;
+    margin-top: 1.6em;
   }
 }
 /* End */
@@ -361,10 +367,13 @@ FOOTER
     font-size: 2rem;
   }
   .social-media {
-    font-size: 1rem;
+    font-size: 1.7rem;
   }
   .projects-title {
     font-size: 2rem;
+  }
+  .farewell-quote {
+    font-size: 1.5rem;
   }
 }
 /* End */
@@ -374,7 +383,7 @@ FOOTER
 @media (min-width: 1024px) {
   body {
     font-size: 1.2rem;
-    letter-spacing: 0.015em;
+    letter-spacing: .015em;
     line-height: 1.5;
   }
   header {
@@ -387,7 +396,7 @@ FOOTER
     font-size: 1.5rem;
   }
   p {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
   img {
     max-width: 100%;
@@ -397,11 +406,11 @@ FOOTER
     font-size: 4.5rem;
   }
   .header-icons {
-  font-size: 0.8rem;
+    font-size: .8rem;
   }
   .welcome {
     margin-top: 3em;
-    margin-bottom: 0.5em;
+    margin-bottom: .5em;
     font-size: 1rem;
   }
   .landing {
@@ -414,7 +423,10 @@ FOOTER
   }
   .first-column {
     grid-column: 1/6;
-    line-height: 2.5;
+    line-height: 2;
+  }
+  .general-assembly {
+    font-size: 2rem;
   }
   .intern {
     font-size: 2rem;
@@ -439,7 +451,7 @@ FOOTER
     margin-top: 0;
   }
   .projects-sub {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-top: 3.5em;
     text-align: left;
   }
@@ -454,10 +466,9 @@ FOOTER
     grid-column: 8/12;
   }
   .expertise-box {
-  flex-direction: row;
+    flex-direction: row;
   }
   .expertise-title {
-  
     font-size: 2.5rem;
   }
   .social-media {
@@ -473,12 +484,12 @@ FOOTER
     justify-content: flex-end;
   }
   .expertise-box-title {
-  padding-right: 0em;
-  padding-left: 0em;
+    padding-right: 0em;
+    padding-left: 0em;
   }
   li {
-  border-bottom: .2px solid #ddd;
-  text-align: right;
+    border-bottom: .2px solid #ddd;
+    text-align: right;
   }
   ul {
     padding: 1em;
@@ -491,8 +502,7 @@ FOOTER
   }
   .container.footer {
     padding-top: 3em;
-    padding-bottom: 1em;
-    margin-top: 0;
+    padding-bottom: .5em;
   }
   .contact {
     grid-column: 2/12;
@@ -505,16 +515,18 @@ FOOTER
   }
   .farewell {
     margin-right: 2em;
-    font-size: 1.5rem;
+  }
+  .farewell-quote {
+    font-size: 1.7rem;
   }
   .social-media {
-    padding-left: 0.5em;
+    padding-left: .5em;
     flex-direction: column;
   }
   .fa-3x {
     font-size: 2.5em;
-    padding-left: 0.01em;
-    padding-right: 0.01em;
+    padding-left: .01em;
+    padding-right: .01em;
   }
 }
 /* End */
@@ -525,7 +537,11 @@ FOOTER
     font-size: 1.5rem;
   }
   .first-column {
-    line-height: 3;
+    font-size: 2rem;
+    padding-top: 1em;
+  }
+  .general-assembly {
+    font-size: 3rem;
   }
   .intern {
     font-size: 2.5rem;
@@ -542,58 +558,18 @@ FOOTER
     grid-column: 8/12;
   }
   .expertise-title { 
-  font-size: 3.5rem;
+    font-size: 3.5rem;
   }
   .projects-title {
-  font-size: 3.5rem;
+    font-size: 3.5rem;
   }
   .expertise-end {
     margin-top: 2.5em;
   }
-  .farewell {
-    font-size: 3rem;
+  .contact {
+    margin-bottom: 0;
+  }
+  .farewell-quote {
+    font-size: 2.1rem;
   }
 }
-
-
-
-
-
-
-
-/*////////////////////sandbox////////////////////
-*/
-dialog {
-  text-align: center;
-  font-size: 1rem;
-  font-weight: bold;
-  color: red;
-}
-
-
-/*/*//* span {
-  position: relative;
-  display: block;
-  width: 0;
-  min-height: 0.5em;
-  -webkit-transition: width 5s; /* For Safari 3.1 to 6.0 */
-  /*transition: width 5s;*/
-  /*transition: width 0.3s;*/
-/*  overflow: hidden;
-}*/
-/*span.open {
-  -webkit-transform: rotate(deg);  Safari 
-  transform: rotate(deg);
-  width: 100%;
-  height: 10em;
-  animation-name: example;
-}*/
-  /*@keyframes example {
-  0%   {background-color:red; left:0px; top:0px;}
-  25%  {background-color:yellow; left:200px; top:0px;}
-  50%  {background-color:blue; left:200px; top:200px;}
-  75%  {background-color:green; left:0px; top:200px;}
-  100% {background-color:red; left:0px; top:0px;}
-}*/
-
-
